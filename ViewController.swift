@@ -28,10 +28,15 @@ class ViewController: UIViewController {
     @IBAction func makeMeNotSoUncool(sender: AnyObject) {
         coolLogo.hidden = false
         coolBg.hidden = false 
-        uncoolButton.hidden = true;
+        uncoolButton.hidden = true
+        let tools = AppTools()
+        let name = tools.getName()
+        print(name)
     }
     
-    
+    func whoIsCool()->String{
+        return "You Know whoz cool... You are"
+    }
 
 }
 

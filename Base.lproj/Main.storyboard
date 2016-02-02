@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,17 +15,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="EPK-wj-Wb0">
                                 <rect key="frame" x="-206" y="-122" width="1036" height="925"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SuperCool" translatesAutoresizingMaskIntoConstraints="NO" id="LaS-7W-t3W">
-                                <rect key="frame" x="40" y="70" width="240" height="128"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SuperCool" translatesAutoresizingMaskIntoConstraints="NO" id="LaS-7W-t3W">
+                                <rect key="frame" x="36" y="70" width="303" height="95"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beL-0R-Qbs">
-                                <rect key="frame" x="54" y="285" width="212" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beL-0R-Qbs">
+                                <rect key="frame" x="50" y="252" width="275" height="30"/>
                                 <state key="normal" title="Make me SuperCool"/>
                                 <connections>
                                     <action selector="makeMeNotSoUncool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jrc-kJ-IDN"/>
@@ -32,8 +33,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="beL-0R-Qbs" firstAttribute="top" secondItem="LaS-7W-t3W" secondAttribute="bottom" constant="87" id="F6a-dp-OB2"/>
+                            <constraint firstItem="beL-0R-Qbs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="HTr-l8-iM7"/>
+                            <constraint firstItem="LaS-7W-t3W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Sgh-49-6mV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LaS-7W-t3W" secondAttribute="trailing" constant="20" id="cZx-Ba-jQu"/>
+                            <constraint firstItem="LaS-7W-t3W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="hwQ-l0-GHR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="beL-0R-Qbs" secondAttribute="trailing" constant="34" id="qHH-7k-Bhe"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="coolBg" destination="EPK-wj-Wb0" id="dec-id-GSV"/>
                         <outlet property="coolLogo" destination="LaS-7W-t3W" id="bUg-nv-e0H"/>
